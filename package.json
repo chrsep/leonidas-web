@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
+    "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.2",
     "next": "10.0.3",
     "next-pwa": "^3.1.5",
