@@ -3,6 +3,19 @@
 
   let email: string
   let password: string
+
+  const handleSubmit = async (e: SubmitEvent) => {
+    e.preventDefault()
+    console.log(email, password)
+
+    const result = await fetch("/api/login", {
+      body: JSON.stringify({ email, password }),
+      method: "POST",
+    })
+
+    const body = await result.json()
+    console.log(body)
+  }
 </script>
 
 <div>
@@ -25,7 +38,7 @@
   </p>
 </div>
 
-<form class="mt-8 space-y-6" action="#" method="POST">
+<form class="mt-8 space-y-6" action="#" method="POST" on:submit={handleSubmit}>
   <TextField
     label="Email address"
     name="email"
