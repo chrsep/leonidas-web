@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="use github action to deploy.">
-      <change afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="setup prisma with simple nextauth.">
+      <change afterPath="$PROJECT_DIR$/leonidas-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fly.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fly.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +19,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file:///usr/lib/go" />
   <component name="Git.Settings">
@@ -57,7 +60,9 @@
     "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/home/chris/Projects/leonidas-web/docker-compose.yml",
+    "jdk.selected.LATEX_MODULE_TYPE": "Native TeX Live SDK",
+    "last_opened_file_path": "/home/chris/Projects/leonidas-web",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -67,7 +72,10 @@
     "nodejs_interpreter_path": "/home/chris/.fnm/node-versions/v16.13.1/installation/bin/node",
     "nodejs_package_manager_path": "pnpm",
     "prettierjs.PrettierConfiguration.Package": "/home/chris/Projects/leonidas-web/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "go.vgo",
     "ts.external.directory.path": "/home/chris/Projects/leonidas-web/node_modules/typescript/lib"
   }
 }]]></component>
@@ -90,13 +98,14 @@
       <command value="open good-enough" />
       <command value="yarn run dev" />
       <command value="open chrsep.dev" />
-      <command value="dev" />
       <command value="open obserfy" />
       <command value="compose" />
       <command value="open atreus" />
+      <command value="open diglog-web-w" />
+      <command value="dev" />
     </option>
   </component>
-  <component name="RunManager" selected="Docker.compose">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -141,7 +150,8 @@
       <workItem from="1644306731072" duration="723000" />
       <workItem from="1644308232840" duration="7084000" />
       <workItem from="1644381723270" duration="15000" />
-      <workItem from="1645862741355" duration="7476000" />
+      <workItem from="1645862741355" duration="7733000" />
+      <workItem from="1645871695611" duration="248000" />
     </task>
     <task id="LOCAL-00001" summary="add typescript, use webpack 5">
       <created>1606318036246</created>
@@ -297,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645868152725</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="setup prisma with simple nextauth.">
+      <created>1645870450643</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1645870450643</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +357,8 @@
     <MESSAGE value="move back to nextjs.&#10;&#10;for nivo charts and react's ecosystem." />
     <MESSAGE value="add docker-compose." />
     <MESSAGE value="use github action to deploy." />
-    <option name="LAST_COMMIT_MESSAGE" value="use github action to deploy." />
+    <MESSAGE value="setup prisma with simple nextauth." />
+    <option name="LAST_COMMIT_MESSAGE" value="setup prisma with simple nextauth." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
