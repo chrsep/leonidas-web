@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="setup prisma with simple nextauth.">
-      <change afterPath="$PROJECT_DIR$/leonidas-web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="add headlessui.">
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,10 +96,10 @@
       <command value="yarn run dev" />
       <command value="open chrsep.dev" />
       <command value="open obserfy" />
-      <command value="compose" />
       <command value="open atreus" />
       <command value="open diglog-web-w" />
       <command value="dev" />
+      <command value="compose" />
     </option>
   </component>
   <component name="RunManager" selected="Docker.compose">
@@ -151,7 +148,7 @@
       <workItem from="1644308232840" duration="7084000" />
       <workItem from="1644381723270" duration="15000" />
       <workItem from="1645862741355" duration="7733000" />
-      <workItem from="1645871695611" duration="248000" />
+      <workItem from="1645871695611" duration="473000" />
     </task>
     <task id="LOCAL-00001" summary="add typescript, use webpack 5">
       <created>1606318036246</created>
@@ -314,7 +311,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645870450643</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add tailwind. reformat files using prettier.">
+      <created>1645871995613</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1645871995613</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add headlessui.">
+      <created>1645872037342</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1645872037342</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +369,9 @@
     <MESSAGE value="add docker-compose." />
     <MESSAGE value="use github action to deploy." />
     <MESSAGE value="setup prisma with simple nextauth." />
-    <option name="LAST_COMMIT_MESSAGE" value="setup prisma with simple nextauth." />
+    <MESSAGE value="add tailwind. reformat files using prettier." />
+    <MESSAGE value="add headlessui." />
+    <option name="LAST_COMMIT_MESSAGE" value="add headlessui." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
