@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="move back to nextjs.&#10;&#10;for nivo charts and react's ecosystem.">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="c7702cfa-904b-4774-8475-a593e6972746" name="Default Changelist" comment="add docker-compose." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +81,7 @@
       <command value="open chrsep.dev" />
       <command value="dev" />
       <command value="open obserfy" />
+      <command value="open atreus" />
     </option>
   </component>
   <component name="RunManager">
@@ -117,7 +116,7 @@
       <workItem from="1644306731072" duration="723000" />
       <workItem from="1644308232840" duration="7084000" />
       <workItem from="1644381723270" duration="15000" />
-      <workItem from="1645862741355" duration="5208000" />
+      <workItem from="1645862741355" duration="5320000" />
     </task>
     <task id="LOCAL-00001" summary="add typescript, use webpack 5">
       <created>1606318036246</created>
@@ -259,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645867795878</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add docker-compose.">
+      <created>1645868012938</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1645868012938</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +306,8 @@
     <MESSAGE value="add proper login form and api." />
     <MESSAGE value="replace bcrypt with bcryptjs." />
     <MESSAGE value="move back to nextjs.&#10;&#10;for nivo charts and react's ecosystem." />
-    <option name="LAST_COMMIT_MESSAGE" value="move back to nextjs.&#10;&#10;for nivo charts and react's ecosystem." />
+    <MESSAGE value="add docker-compose." />
+    <option name="LAST_COMMIT_MESSAGE" value="add docker-compose." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
