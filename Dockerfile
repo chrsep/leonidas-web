@@ -27,6 +27,8 @@ RUN yarn build
 FROM node:16-alpine AS runner
 WORKDIR /app
 
+RUN yarn global add prisma
+
 ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED 1
@@ -43,6 +45,8 @@ COPY --from=builder /app/package.json ./package.json
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+COPY prisma prisma
 
 USER nextjs
 
