@@ -28,15 +28,13 @@ const Login = () => (
           <div className="mt-8">
             <div>
               <div>
-                <p className="text-sm font-medium text-gray-700">
-                  Log in with
-                </p>
+                <p className="text-sm font-medium text-gray-700">Log in with</p>
 
                 <div className="mt-1 grid grid-cols-3 gap-3">
                   <div>
                     <a
                       href="#"
-                      className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
+                      className="inline-flex h-full w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
                     >
                       <span className="sr-only">Log in with Facebook</span>
                       <svg
