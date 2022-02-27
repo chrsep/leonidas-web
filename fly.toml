@@ -15,6 +15,10 @@ processes = []
 [deploy]
   release_command = "prisma migrate deploy"
 
+[[statics]]
+  guest_path = "/app/.next/static"
+  url_prefix = "/"
+
 [[services]]
   http_checks = []
   internal_port = 8080

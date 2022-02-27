@@ -1,10 +1,11 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,tsx}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    "@tailwindcss/typography",
+    "@tailwindcss/forms",
+    "@tailwindcss/line-clamp",
+  ],
 }
