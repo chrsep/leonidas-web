@@ -15,13 +15,13 @@ const Login = () => (
         alt="Leonidas"
       />
       <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-        Log in to your account
+        Sign up for a new account
       </h2>
       <p className="mt-2 text-sm text-gray-600">
         Or{" "}
-        <Link href="/auth/sign-up">
+        <Link href="/auth/login">
           <a className="font-medium text-indigo-600 hover:text-indigo-500">
-            sign up here
+            log in here.
           </a>
         </Link>
       </p>
@@ -30,7 +30,7 @@ const Login = () => (
     <div className="mt-8">
       <div>
         <div>
-          <p className="text-sm font-medium text-gray-700">Log in with</p>
+          <p className="text-sm font-medium text-gray-700">Sign up with</p>
 
           <div className="mt-1 grid grid-cols-3 gap-3">
             <SocialLogin
@@ -196,7 +196,7 @@ const SignInForm = () => {
             className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             disabled={loading}
           >
-            Log in
+            Sign up
           </button>
         </div>
       </form>
