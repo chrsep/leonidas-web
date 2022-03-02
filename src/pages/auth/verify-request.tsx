@@ -1,4 +1,4 @@
-import AuthLayout from "../../layout/auth-layout"
+import AuthLayout from "$layouts//auth-layout"
 
 const VerifyRequest = () => {
   return (

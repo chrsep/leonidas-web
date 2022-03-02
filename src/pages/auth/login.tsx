@@ -1,6 +1,6 @@
-import useEmailLogin from "../../hooks/use-email-login"
+import useEmailLogin from "$hooks/use-email-login"
 import { FC, FormEventHandler, ReactNode, useState } from "react"
-import AuthLayout from "../../layout/auth-layout"
+import AuthLayout from "$layouts/auth-layout"
 import Image from "next/image"
 import Link from "next/link"
 
