@@ -8,10 +8,6 @@ const Home: NextPage = () => {
         <Link href="/">
           <a>Leonidas</a>
         </Link>
-
-        <Link href={"/login"}>
-          <a className="ml-auto rounded-lg border px-3 py-1 text-sm">Log in</a>
-        </Link>
       </nav>
     </div>
   )

@@ -5,7 +5,6 @@ import EmailProvider from "next-auth/providers/email"
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
-  secret: process.env.NEXT_AUTH_SECRET,
   providers: [
     EmailProvider({
       server: {

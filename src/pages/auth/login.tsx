@@ -1,9 +1,32 @@
-import useEmailLogin from "../hooks/use-email-login"
+import useEmailLogin from "../../hooks/use-email-login"
 import { FC, FormEventHandler, ReactNode, useState } from "react"
-import AuthLayout from "../layout/auth-layout"
+import AuthLayout from "../../layout/auth-layout"
+import Image from "next/image"
 
 const Login = () => (
   <AuthLayout>
+    <div>
+      <Image
+        src="/favicon.ico"
+        className="h-12 w-auto"
+        width={72}
+        height={72}
+        alt="Leonidas"
+      />
+      <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+        Log in to your account
+      </h2>
+      <p className="mt-2 text-sm text-gray-600">
+        Or{" "}
+        <a
+          href="#"
+          className="font-medium text-indigo-600 hover:text-indigo-500"
+        >
+          start your 14-day free trial
+        </a>
+      </p>
+    </div>
+
     <div className="mt-8">
       <div>
         <div>
