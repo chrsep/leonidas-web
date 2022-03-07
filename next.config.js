@@ -4,6 +4,7 @@ const withPreact = require("next-plugin-preact")
 /** @type {import("next").NextConfig} */
 let config = {
   pwa: {
+    scope: "/app",
     dest: "public",
     buildExcludes: [
       /middleware-manifest\.json$/,

@@ -1,30 +1,25 @@
 import { GetServerSideProps, NextPage } from "next"
 import Link from "next/link"
 import { getSession } from "next-auth/react"
-import BaseLayout from "$layouts/base-layout"
 
 const Home: NextPage = () => {
   return (
-    <BaseLayout className={"bg-white"}>
+    <div className={"bg-white"}>
       <nav className="sticky top-0 flex items-center border-b border-opacity-25 p-4">
         <Link href="/">
           <a>Leonidas</a>
         </Link>
-
-        <Link href={"/auth/login"}>
-          <a className="ml-auto rounded-lg border px-3 py-1 text-sm">Log in</a>
-        </Link>
       </nav>
-    </BaseLayout>
+    </div>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const session = await getSession({ req })
-  if (session) {
+  if (!session) {
     return {
       redirect: {
-        destination: "/app/home",
+        destination: "/auth/login",
       },
       props: {},
     }
