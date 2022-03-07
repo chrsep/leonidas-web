@@ -22,6 +22,8 @@ let config = {
   reactStrictMode: true,
   images: {
     domains: ["images.unsplash.com"],
+    minimumCacheTTL: 60 * 60 * 24 * 60,
+    formats: ["image/avif", "image/webp"],
   },
 }
 
