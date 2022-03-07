@@ -4,8 +4,10 @@ const withPWA = [
   require("next-pwa"),
   {
     pwa: {
+      publicExcludes: ["!**/*"],
       buildExcludes: [/.*/],
       dest: "public",
+      runtimeCaching: require("./sw-cache.js"),
     },
   },
 ]

@@ -5,7 +5,7 @@ import Link from "next/link"
 import AuthLayout from "$layouts/auth-layout"
 
 const Login = () => (
-  <AuthLayout>
+  <AuthLayout title={"Sign up"}>
     <div>
       <Image
         src="/favicon.ico"

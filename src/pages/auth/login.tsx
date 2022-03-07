@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Login = () => (
-  <AuthLayout>
+  <AuthLayout title={"Log in"}>
     <div>
       <Image
         src="/favicon.ico"
