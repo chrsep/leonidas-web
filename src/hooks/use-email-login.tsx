@@ -11,6 +11,7 @@ const useEmailLogin = () => {
     const result = await signIn("email", {
       email,
       callbackUrl: "/app/home",
+      redirect: false,
     })
     if (result) {
       await router.push("/auth/verify-request")
