@@ -5,6 +5,14 @@ const withPWA = [
   {
     pwa: {
       dest: "public",
+      buildExcludes: [
+        /middleware-manifest\.json$/,
+        /_middleware\.js$/,
+        /middleware-chunks/,
+        /_middleware\.js\.map$/,
+        /middleware-runtime\.js$/,
+        /server\/pages\/_middleware\.js$/,
+      ],
     },
   },
 ]
