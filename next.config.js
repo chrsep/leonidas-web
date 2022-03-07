@@ -14,13 +14,6 @@ const withPWA = [
 
 const plugins = [require("next-plugin-preact"), withPWA]
 
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self';
-  style-src 'self';
-  font-src 'self';  
-`
-
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -37,10 +30,6 @@ const securityHeaders = [
   {
     key: "Referrer-Policy",
     value: "origin-when-cross-origin",
-  },
-  {
-    key: "Content-Security-Policy",
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
   },
 ]
 
