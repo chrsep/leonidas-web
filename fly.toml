@@ -17,7 +17,7 @@ processes = []
 
 [[statics]]
   guest_path = "/app/.next/static"
-  url_prefix = "/"
+  url_prefix = "/_next/static"
 
 [[services]]
   http_checks = []
