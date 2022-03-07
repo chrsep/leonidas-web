@@ -5,7 +5,14 @@ const withPWA = [
   {
     pwa: {
       publicExcludes: ["!**/*"],
-      buildExcludes: [/.*/],
+      buildExcludes: [
+        /.*/,
+        /middleware-manifest\.json$/,
+        /_middleware\.js$/,
+        /_middleware\.js\.map$/,
+        /middleware-runtime\.js$/,
+        /server\/pages\/_middleware\.js$/,
+      ],
       dest: "public",
       runtimeCaching: require("./sw-cache.js"),
     },
