@@ -1,4 +1,17 @@
-const withPreact = require("next-plugin-preact")
+const composePlugins = require("next-compose-plugins")
+
+const withPWA = [
+  require("next-pwa"),
+  {
+    pwa: {
+      buildExcludes: [/.*/],
+      dest: "public",
+    },
+  },
+]
+
+const plugins = [require("next-plugin-preact"), withPWA]
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   experimental: {
@@ -11,4 +24,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPreact(nextConfig)
+module.exports = composePlugins(plugins, nextConfig)
