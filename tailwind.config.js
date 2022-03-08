@@ -1,7 +1,13 @@
-module.exports = {
+const colors = require("tailwindcss/colors")
+
+const config = {
   content: ["./src/**/*.{js,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: colors.violet,
+      },
+    },
   },
   plugins: [
     "@tailwindcss/typography",
@@ -9,3 +15,5 @@ module.exports = {
     "@tailwindcss/line-clamp",
   ],
 }
+
+module.exports = config

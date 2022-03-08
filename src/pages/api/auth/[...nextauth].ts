@@ -6,6 +6,9 @@ import GitHubProvider from "next-auth/providers/github"
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
+  session: {
+    maxAge: 3 * 30 * 24 * 60 * 60, // 3 months
+  },
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_CLIENT_ID,

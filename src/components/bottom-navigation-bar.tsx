@@ -18,6 +18,7 @@ const BottomNavigationBar = () => (
         text={"Settings"}
         href={"/app/settings"}
         iconUrl={"/icons/settings.svg"}
+        iconClassName={"!w-[26px] !h-[26px] !mb-0"}
       />
     </ul>
   </nav>
@@ -27,21 +28,28 @@ const Item: FC<{
   text: string
   href: string
   iconUrl: string
-}> = ({ text, href, iconUrl }) => {
+  iconClassName?: string
+}> = ({ text, href, iconUrl, iconClassName }) => {
   const { asPath } = useRouter()
+  const selected = asPath === href
 
   return (
     <li
       className={clsx(
-        "relative mx-4 flex w-1/4 items-center justify-center ",
-        "after:absolute after:inset-x-0 after:top-[-1px] after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-black after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
-        asPath === href && "after:scale-x-100"
+        "relative flex w-1/4 items-center justify-center font-medium transition-opacity duration-500 ease-out",
+        "after:absolute after:inset-x-0 after:top-[-1px] after:mx-4 after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-primary-600 after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
+        selected && "text-primary-800 after:scale-x-100",
+        !selected && "opacity-60"
       )}
     >
       <Link href={href}>
-        <a className={"flex w-full flex-col items-center py-3"}>
-          <Icon className={"mb-0.5 h-[24px] w-[24px]"} src={iconUrl} />
-          <p className={"text-xs opacity-70"}>{text}</p>
+        <a className={"flex w-full flex-col items-center py-2"}>
+          <Icon
+            className={clsx(iconClassName, "mb-0.5 h-[26px] w-[26px]")}
+            src={iconUrl}
+            color={selected ? "bg-primary-700" : "bg-black"}
+          />
+          <p className={"text-xs"}>{text}</p>
         </a>
       </Link>
     </li>
