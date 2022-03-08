@@ -4,6 +4,7 @@ import Link from "next/link"
 import AuthLayout from "$layouts/auth-layout"
 import useEmailAuth from "$hooks/use-email-auth"
 import useGitHubAuth from "$hooks/use-github-auth"
+import SocialLogin from "$components/social-login"
 
 const Login = () => {
   const githubAuth = useGitHubAuth()
@@ -71,7 +72,7 @@ const Login = () => {
 
               <SocialLogin
                 label={"Login in with Github"}
-                onClick={() => githubAuth.login()}
+                onClick={githubAuth.login}
                 logo={
                   <svg
                     className="h-5 w-5"
@@ -110,22 +111,6 @@ const Login = () => {
     </AuthLayout>
   )
 }
-
-const SocialLogin: FC<{
-  label: string
-  logo: ReactNode
-  onClick?: () => void
-}> = ({ onClick, logo, label }) => (
-  <div>
-    <button
-      onClick={onClick}
-      className="inline-flex h-full w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
-    >
-      <span className="sr-only">{label}</span>
-      {logo}
-    </button>
-  </div>
-)
 
 const SignInForm = () => {
   const [email, setEmail] = useState("")
