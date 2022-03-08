@@ -1,5 +1,5 @@
 import useEmailAuth from "../../hooks/use-email-auth"
-import { FC, FormEventHandler, ReactNode, useState } from "react"
+import { FormEventHandler, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import AuthLayout from "$layouts/auth-layout"
@@ -12,13 +12,17 @@ const Login = () => {
   return (
     <AuthLayout title={"Sign up"}>
       <div>
-        <Image
-          src="/favicon.ico"
-          className="h-12 w-auto"
-          width={72}
-          height={72}
-          alt="Leonidas"
-        />
+        <Link href={"/"}>
+          <a>
+            <Image
+              src="/favicon.ico"
+              className="h-12 w-auto"
+              width={72}
+              height={72}
+              alt="Leonidas"
+            />
+          </a>
+        </Link>
         <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
           Sign up for a new account
         </h2>
