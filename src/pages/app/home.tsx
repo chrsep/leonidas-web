@@ -1,17 +1,9 @@
 import { GetServerSideProps, NextPage } from "next"
-import Link from "next/link"
 import { getSession } from "next-auth/react"
+import AppLayout from "$layouts/app-layout"
 
 const Home: NextPage = () => {
-  return (
-    <div className={"bg-white"}>
-      <nav className="sticky top-0 flex items-center border-b border-opacity-25 p-4">
-        <Link href="/">
-          <a>Leonidas</a>
-        </Link>
-      </nav>
-    </div>
-  )
+  return <AppLayout className={"bg-white"}>test</AppLayout>
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
