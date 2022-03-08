@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import clsx from "clsx"
 
 const BottomNavigationBar = () => (
-  <nav className="fixed inset-x-0 bottom-0 border-t md:hidden">
+  <nav className="fixed inset-x-0 bottom-0 border-t backdrop-blur backdrop-saturate-200 backdrop-filter md:hidden">
     <ul className={"flex"}>
       <Item text={"Home"} href={"/app/home"} iconUrl={"/icons/home.svg"} />
       <Item text={"Logs"} href={"/app/logs"} iconUrl={"/icons/notebook.svg"} />
