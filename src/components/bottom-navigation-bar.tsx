@@ -18,7 +18,7 @@ const BottomNavigationBar = () => (
         text={"Settings"}
         href={"/app/settings"}
         iconUrl={"/icons/settings.svg"}
-        iconClassName={"!w-[26px] !h-[26px] !mb-0"}
+        iconClassName={"scale-110"}
       />
     </ul>
   </nav>
@@ -43,7 +43,7 @@ const Item: FC<{
       )}
     >
       <Link href={href}>
-        <a className={"flex w-full flex-col items-center py-2"}>
+        <a className={"flex h-full w-full flex-col items-center py-2"}>
           <Icon
             className={clsx(iconClassName, "mb-0.5 h-[26px] w-[26px]")}
             src={iconUrl}
