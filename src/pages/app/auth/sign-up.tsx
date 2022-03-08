@@ -1,4 +1,4 @@
-import useEmailAuth from "../../hooks/use-email-auth"
+import useEmailAuth from "$hooks/use-email-auth"
 import { FormEventHandler, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -30,7 +30,7 @@ const Login = () => {
         </h2>
         <p className="mt-2 text-sm text-gray-600">
           Or{" "}
-          <Link href="/auth/login">
+          <Link href="/app/auth/login">
             <a className="font-medium text-indigo-600 hover:text-indigo-500">
               log in here.
             </a>

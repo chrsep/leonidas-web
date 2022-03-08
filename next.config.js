@@ -23,6 +23,8 @@ let config = {
   images: {
     domains: ["images.unsplash.com"],
     minimumCacheTTL: 60 * 60 * 24 * 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 }
 

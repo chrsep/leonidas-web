@@ -30,7 +30,7 @@ const Login = () => {
         </h2>
         <p className="mt-2 text-sm text-gray-600">
           Or{" "}
-          <Link href="/auth/sign-up">
+          <Link href="/app/auth/sign-up">
             <a className="font-medium text-indigo-600 hover:text-indigo-500">
               sign up here
             </a>

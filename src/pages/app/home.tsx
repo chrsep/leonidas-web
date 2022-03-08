@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   if (!session) {
     return {
       redirect: {
-        destination: "/auth/login",
+        destination: "/app/auth/login",
       },
       props: {},
     }

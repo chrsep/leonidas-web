@@ -1,4 +1,5 @@
-import { FC, ReactNode } from "react"
+import { FC } from "react"
+import Image from "next/image"
 
 const SocialLogin: FC<{
   label: string
@@ -11,7 +12,13 @@ const SocialLogin: FC<{
       className="inline-flex h-full w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
     >
       <span className="sr-only">{label}</span>
-      <img src={logoUrl} alt="Facebook" className={"h-5 w-5 opacity-60"} />
+      <Image
+        src={logoUrl}
+        alt="Facebook"
+        height={20}
+        width={20}
+        className={"h-5 w-5 opacity-60"}
+      />
     </button>
   </div>
 )
