@@ -14,7 +14,7 @@ const useEmailAuth = () => {
       redirect: false,
     })
     if (result) {
-      await router.push("/auth/verify-request")
+      await router.push("/app/auth/verify-request")
     }
     setLoading(false)
   }
