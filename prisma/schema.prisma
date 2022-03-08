@@ -16,12 +16,12 @@ model Account {
   type               String
   provider           String
   providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
   expires_at         Int?
   token_type         String?
   scope              String?
-  id_token           String?  @db.Text
+  id_token           String? @db.Text
   session_state      String?
   oauth_token_secret String?
   oauth_token        String?
@@ -40,13 +40,16 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
+  id             String           @id @default(cuid())
+  name           String?
+  email          String?          @unique
+  emailVerified  DateTime?
+  image          String?
+  accounts       Account[]
+  sessions       Session[]
+  exercise       Exercise[]
+  wOrkoutSession WOrkoutSession[]
+  Rest           Rest[]
 }
 
 model VerificationToken {
@@ -55,4 +58,53 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Exercise {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  image       String?
+  category    String
+  tags        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  Sets   Sets[]
+}
+
+model WOrkoutSession {
+  id        String   @id @default(cuid())
+  dateTime  DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+  rest   Rest[]
+  sets   Sets[]
+}
+
+model Sets {
+  id        String   @id @default(cuid())
+  reps      Int
+  weight    Float
+  createdAt DateTime @default(now())
+
+  workoutSession   WOrkoutSession @relation(fields: [wOrkoutSessionId], references: [id])
+  wOrkoutSessionId String
+  exercise         Exercise       @relation(fields: [exerciseId], references: [id])
+  exerciseId       String
+}
+
+model Rest {
+  id        String   @id @default(cuid())
+  dateTime  DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  workoutSession   WOrkoutSession @relation(fields: [wOrkoutSessionId], references: [id])
+  User             User?          @relation(fields: [userId], references: [id])
+  userId           String?
+  wOrkoutSessionId String
 }
