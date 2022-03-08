@@ -1,9 +1,9 @@
-import { FC } from "react"
+import { FC, ReactElement } from "react"
 import BaseLayout from "$layouts/base-layout"
 import clsx from "clsx"
 import BottomNavigationBar from "$components/bottom-navigation-bar"
 
-const AuthLayout: FC<{
+const AppLayout: FC<{
   title?: string
   description?: string
   className?: string
@@ -18,4 +18,10 @@ const AuthLayout: FC<{
   </BaseLayout>
 )
 
-export default AuthLayout
+export const createAppLayoutGetter =
+  // eslint-disable-next-line react/display-name
+  (className?: string) => (page: ReactElement) => {
+    return <AppLayout className={className}>{page}</AppLayout>
+  }
+
+export default AppLayout

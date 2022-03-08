@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import clsx from "clsx"
 
 const BottomNavigationBar = () => (
-  <nav className="fixed inset-x-0 bottom-0 border-t backdrop-blur backdrop-filter md:hidden">
+  <nav className="fixed inset-x-0 bottom-0 border-t md:hidden">
     <ul className={"flex"}>
       <Item text={"Home"} href={"/app/home"} iconUrl={"/icons/home.svg"} />
       <Item text={"Logs"} href={"/app/logs"} iconUrl={"/icons/notebook.svg"} />
@@ -33,14 +33,14 @@ const Item: FC<{
   return (
     <li
       className={clsx(
-        "relative mx-2 flex w-1/4 items-center justify-center",
-        asPath === href &&
-          "after:height-px after:absolute after:inset-x-0 after:top-0 after:h-[4px] after:rounded-bl-lg after:rounded-br-lg after:bg-black after:content-['']"
+        "relative mx-4 flex w-1/4 items-center justify-center ",
+        "after:absolute after:inset-x-0 after:top-0 after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-black after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
+        asPath === href && "after:scale-x-100"
       )}
     >
       <Link href={href}>
         <a className={"flex w-full flex-col items-center py-3"}>
-          <Icon className={"mb-1 h-6 w-6"} src={iconUrl} />
+          <Icon className={"mb-0.5 h-[24px] w-[24px]"} src={iconUrl} />
           <p className={"text-xs opacity-70"}>{text}</p>
         </a>
       </Link>

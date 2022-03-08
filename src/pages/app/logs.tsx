@@ -1,10 +1,13 @@
 import { GetServerSideProps, NextPage } from "next"
 import { getSession } from "next-auth/react"
-import AppLayout from "$layouts/app-layout"
+import AppLayout, { createAppLayoutGetter } from "$layouts/app-layout"
+import { SSR } from "$lib/next"
 
-const Logs: NextPage = () => {
-  return <AppLayout className={"bg-white"}>test</AppLayout>
+const Logs: SSR = () => {
+  return <div>test</div>
 }
+
+Logs.getLayout = createAppLayoutGetter("bg-white")
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const session = await getSession({ req })
