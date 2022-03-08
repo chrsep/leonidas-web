@@ -1,4 +1,4 @@
-import useEmailLogin from "../../hooks/use-email-login"
+import useEmailAuth from "../../hooks/use-email-login"
 import { FC, FormEventHandler, ReactNode, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -128,7 +128,7 @@ const SocialLogin: FC<{
 
 const SignInForm = () => {
   const [email, setEmail] = useState("")
-  const { loading, signIn } = useEmailLogin()
+  const { loading, signIn } = useEmailAuth()
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault()

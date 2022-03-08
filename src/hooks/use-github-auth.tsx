@@ -2,14 +2,13 @@ import { useState } from "react"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/router"
 
-const useEmailLogin = () => {
+const useGithubAuth = () => {
   const [loading, setLoading] = useState(false)
   const router = useRouter()
 
-  const emailSignIn = async (email: string) => {
+  const login = async () => {
     setLoading(true)
-    const result = await signIn("email", {
-      email,
+    const result = await signIn("github", {
       callbackUrl: "/app/home",
       redirect: false,
     })
@@ -19,7 +18,7 @@ const useEmailLogin = () => {
     setLoading(false)
   }
 
-  return { loading, signIn: emailSignIn }
+  return { loading, login }
 }
 
-export default useEmailLogin
+export default useGithubAuth
