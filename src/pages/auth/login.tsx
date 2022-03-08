@@ -5,6 +5,8 @@ import AuthLayout from "$layouts/auth-layout"
 import useEmailAuth from "$hooks/use-email-auth"
 import useGitHubAuth from "$hooks/use-github-auth"
 import SocialLogin from "$components/social-login"
+import { GetServerSideProps } from "next"
+import { getSession } from "next-auth/react"
 
 const Login = () => {
   const githubAuth = useGitHubAuth()
@@ -157,6 +159,20 @@ const SignInForm = () => {
       </form>
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req })
+  if (session) {
+    return {
+      redirect: {
+        destination: "/app/home",
+      },
+      props: {},
+    }
+  }
+
+  return { props: {} }
 }
 
 export default Login
