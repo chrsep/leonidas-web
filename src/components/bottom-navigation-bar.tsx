@@ -34,7 +34,7 @@ const Item: FC<{
     <li
       className={clsx(
         "relative mx-4 flex w-1/4 items-center justify-center ",
-        "after:absolute after:inset-x-0 after:top-0 after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-black after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
+        "after:absolute after:inset-x-0 after:top-[-1px] after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-black after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
         asPath === href && "after:scale-x-100"
       )}
     >
