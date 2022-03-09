@@ -1,6 +1,6 @@
 import { FormEventHandler, useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "$components/link"
 import AuthLayout from "$layouts/auth-layout"
 import useEmailAuth from "$hooks/use-email-auth"
 import useGitHubAuth from "$hooks/use-github-auth"

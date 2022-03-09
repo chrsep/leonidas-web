@@ -1,8 +1,9 @@
-import Link from "next/link"
+import Link from "$components/link"
 import { FC } from "react"
 import Icon from "$components/icon"
 import { useRouter } from "next/router"
 import clsx from "clsx"
+import { TypeSafePage } from "next-type-safe-routes"
 
 const BottomNavigationBar = () => (
   <nav className="fixed inset-x-0 bottom-0 border-t backdrop-blur backdrop-saturate-200 backdrop-filter md:hidden">
@@ -26,7 +27,7 @@ const BottomNavigationBar = () => (
 
 const Item: FC<{
   text: string
-  href: string
+  href: TypeSafePage
   iconUrl: string
   iconClassName?: string
 }> = ({ text, href, iconUrl, iconClassName }) => {

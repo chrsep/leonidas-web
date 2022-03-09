@@ -1,5 +1,6 @@
 const withPWA = require("next-pwa")
 const withPreact = require("next-plugin-preact")
+const withTypeSafeRoutes = require("next-type-safe-routes/plugin")
 
 /** @type {import("next").NextConfig} */
 let config = {
@@ -31,6 +32,8 @@ let config = {
 }
 
 config = withPreact(config)
+config = withTypeSafeRoutes(config)
+
 if (process.env.NODE_ENV === "production") {
   config = withPWA(config)
 }

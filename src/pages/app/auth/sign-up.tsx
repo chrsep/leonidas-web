@@ -1,7 +1,7 @@
 import useEmailAuth from "$hooks/use-email-auth"
 import { FormEventHandler, useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "$components/link"
 import AuthLayout from "$layouts/auth-layout"
 import useGithubAuth from "$hooks/use-github-auth"
 import SocialLogin from "$components/social-login"

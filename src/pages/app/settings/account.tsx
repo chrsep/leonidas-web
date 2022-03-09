@@ -2,7 +2,7 @@ import AppLayout from "$layouts/app-layout"
 import { SSR, withAuth } from "$lib/next"
 import Link from "$components/link"
 
-const Exercises: SSR = () => {
+const Account: SSR = () => {
   return (
     <main>
       <div className={"m-4"}>
@@ -22,6 +22,6 @@ export const getServerSideProps = withAuth(async ({ req }) => {
   return { props: {} }
 })
 
-Exercises.getLayout = AppLayout.getLayout({ className: "bg-white" })
+Account.getLayout = AppLayout.getLayout({ className: "bg-white" })
 
-export default Exercises
+export default Account

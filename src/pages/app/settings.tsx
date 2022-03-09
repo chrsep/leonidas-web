@@ -1,7 +1,8 @@
 import AppLayout from "$layouts/app-layout"
 import { SSR, withAuth } from "$lib/next"
-import Link from "next/link"
+import Link from "$components/link"
 import { FC } from "react"
+import { TypeSafePage } from "next-type-safe-routes"
 
 const Settings: SSR = () => {
   return (
@@ -11,8 +12,10 @@ const Settings: SSR = () => {
       </div>
 
       <div className={"m-4 rounded-xl border bg-gray-50"}>
-        <NavigationItems href={"/settings/account"}>Account</NavigationItems>
-        <NavigationItems href={"/settings/exercises"}>
+        <NavigationItems href={"/app/settings/account"}>
+          Account
+        </NavigationItems>
+        <NavigationItems href={"/app/settings/exercises"}>
           Exercises
         </NavigationItems>
       </div>
@@ -21,7 +24,7 @@ const Settings: SSR = () => {
 }
 
 const NavigationItems: FC<{
-  href: string
+  href: TypeSafePage
 }> = ({ href, children }) => (
   <Link href={href}>
     <a className={"block border-b p-4 last:border-b-0"}>{children}</a>

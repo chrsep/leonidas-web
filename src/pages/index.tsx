@@ -1,5 +1,5 @@
 import { GetServerSideProps, NextPage } from "next"
-import Link from "next/link"
+import Link from "$components/link"
 import { getSession } from "next-auth/react"
 import BaseLayout from "$layouts/base-layout"
 
