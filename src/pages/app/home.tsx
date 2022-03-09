@@ -1,26 +1,19 @@
-import { GetServerSideProps } from "next"
-import { getSession } from "next-auth/react"
-import AppLayout, { createAppLayoutGetter } from "$layouts/app-layout"
-import { SSR } from "$lib/next"
+import { createAppLayoutGetter } from "$layouts/app-layout"
+import { SSR, withAuth } from "$lib/next"
 
-const Home: SSR = () => {
+const Home: SSR<typeof getServerSideProps> = ({}) => {
   return <div>test</div>
 }
 
-Home.getLayout = createAppLayoutGetter("bg-white")
-
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const session = await getSession({ req })
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/app/auth/login",
-      },
-      props: {},
-    }
+export const getServerSideProps = withAuth(async ({ req }) => {
+  return {
+    notFound: true,
+    props: {
+      tets: "test",
+    },
   }
+})
 
-  return { props: {} }
-}
+Home.getLayout = createAppLayoutGetter("bg-white")
 
 export default Home
