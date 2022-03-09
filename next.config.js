@@ -30,7 +30,9 @@ let config = {
   },
 }
 
-config = withPWA(config)
 config = withPreact(config)
+if (process.env.NODE_ENV === "production") {
+  config = withPWA(config)
+}
 
 module.exports = config
