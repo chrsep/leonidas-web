@@ -1,5 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType, NextPage } from "next"
-import { ReactElement, ReactNode } from "react"
+import { FC, ReactElement, ReactNode } from "react"
 import { AppProps } from "next/app"
 import { getSession } from "next-auth/react"
 import { ParsedUrlQuery } from "querystring"
@@ -35,4 +35,8 @@ export const withAuth = <
 
     return getServerSideProps(ctx)
   }
+}
+
+export type LayoutComponent<P> = FC<P> & {
+  getLayout: (props: P) => (page: ReactElement) => ReactElement
 }

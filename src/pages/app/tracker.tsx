@@ -1,7 +1,4 @@
-import { GetServerSideProps, NextPage } from "next"
-import { getSession } from "next-auth/react"
-import AppLayout, { createAppLayoutGetter } from "$layouts/app-layout"
-import Settings from "./settings"
+import AppLayout from "$layouts/app-layout"
 import { SSR, withAuth } from "$lib/next"
 
 const Tracker: SSR = () => {
@@ -12,6 +9,6 @@ export const getServerSideProps = withAuth(async ({ req }) => {
   return { props: {} }
 })
 
-Tracker.getLayout = createAppLayoutGetter("bg-white")
+Tracker.getLayout = AppLayout.getLayout({ className: "bg-white" })
 
 export default Tracker

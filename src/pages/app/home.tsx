@@ -1,4 +1,4 @@
-import { createAppLayoutGetter } from "$layouts/app-layout"
+import AppLayout from "$layouts/app-layout"
 import { SSR, withAuth } from "$lib/next"
 
 const Home: SSR<typeof getServerSideProps> = ({}) => {
@@ -7,13 +7,10 @@ const Home: SSR<typeof getServerSideProps> = ({}) => {
 
 export const getServerSideProps = withAuth(async ({ req }) => {
   return {
-    notFound: true,
-    props: {
-      tets: "test",
-    },
+    props: {},
   }
 })
 
-Home.getLayout = createAppLayoutGetter("bg-white")
+Home.getLayout = AppLayout.getLayout({ className: "bg-white" })
 
 export default Home

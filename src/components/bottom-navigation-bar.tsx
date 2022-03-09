@@ -36,8 +36,8 @@ const Item: FC<{
   return (
     <li
       className={clsx(
-        "relative flex w-1/4 items-center justify-center font-medium transition-opacity duration-500 ease-out",
-        "after:absolute after:inset-x-0 after:top-[-1px] after:mx-4 after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-primary-600 after:transition-all after:duration-500 after:ease-out after:will-change-transform after:content-['']",
+        "duration-400 relative flex w-1/4 items-center justify-center font-medium transition-opacity ease-out",
+        "after:duration-400 after:absolute after:inset-x-0 after:top-[-1px] after:mx-4 after:h-[4px] after:scale-x-0 after:rounded-bl-lg after:rounded-br-lg after:bg-primary-600 after:transition-all after:ease-out after:will-change-transform after:content-['']",
         selected && "text-primary-800 after:scale-x-100",
         !selected && "opacity-60"
       )}
